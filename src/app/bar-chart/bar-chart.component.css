@@ -1,0 +1,50 @@
+app-bar-chart #chart {
+        height: inherit;
+        width: inherit;
+}
+app-bar-chart .bar {
+    fill: steelblue;
+}
+        
+app-bar-chart.bar:hover {
+    fill: brown;
+}
+        
+app-bar-chart.axis--x path {
+    display: none;
+}
+app-bar-chart {
+    width: 50%;
+}
+
+
+
+.chart .legend {
+    fill: black;
+    font: 14px sans-serif;
+    text-anchor: start;
+    font-size: 12px;
+  }
+  
+  .chart text {
+    fill: white;
+    font: 10px sans-serif;
+    text-anchor: end;
+  }
+  
+  .chart .label {
+    fill: black;
+    font: 14px sans-serif;
+    text-anchor: end;
+  }
+  
+  .bar:hover {
+    fill: brown;
+  }
+  
+  .axis path,
+  .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+  }

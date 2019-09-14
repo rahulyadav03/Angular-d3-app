@@ -1,0 +1,47 @@
+<h1 class="paddingclass">User Lists</h1>
+<form>
+  <div class="form-group col-6">
+    <div class="input-group">
+      <div class="input-group-addon">
+        <i class="glyphicon glyphicon-search"></i>
+      </div>
+      <input
+        type="text"
+        class="form-control"
+        name="searchString"
+        placeholder="Type to search for Name..."
+        [(ngModel)]="searchString"
+      />
+    </div>
+  </div>
+</form>
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Website</th>
+      </tr>
+    </thead>
+    <tbody *ngIf="users.length > 0">
+      <tr class="cursorClass" *ngFor="let user of users | searchUser: 'name' :searchString; let i = index" (click)="fnGoToUserDetail(user.id)">
+        <th scope="row">{{user.id}}</th>
+        <td>{{user.name}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.website}}</td>
+      </tr>
+    </tbody>
+    <tbody *ngIf="users.length == 0">
+        <tr>
+            <td colspan="10" class="text-center">
+                <div class="text-center margin-t-lg">
+                    <div class="alert alert-info autoWidth spanIcon" role="alert">
+                        <span class="flaticon-caution7">No user record found</span>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+  </table>
