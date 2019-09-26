@@ -1,0 +1,11 @@
+.btnClass{
+    margin: 10px 10px 10px 10px;
+}
+
+.bar {
+    fill: steelblue;
+  }
+  
+  .bar:hover {
+    fill: brown;
+  }

@@ -43,7 +43,7 @@ export default class BarChartComponent implements OnInit {
         {
           label: 'max val',
           values: [3000, 800, 900, 500]
-        },]
+        }]
     };
     
     var chartWidth       = 1000,
@@ -92,7 +92,7 @@ export default class BarChartComponent implements OnInit {
     var colorScale_1 = d3.schemeCategory10;
     // Create rectangles of the correct width
     bar.append("rect")
-        .attr("class", "bar")
+        .attr("class", "bullet")
         .attr("width", x)
         .attr("height", function(d, i) {
           return ((i % 3) == 0) ? barHeight - 1 : barHeight - 1;
@@ -158,7 +158,6 @@ export default class BarChartComponent implements OnInit {
         .attr('x', legendRectSize + legendSpacing)
         .attr('y', legendRectSize - legendSpacing)
         .text(function (d) { return d.label; });
-
   }
   
 }
